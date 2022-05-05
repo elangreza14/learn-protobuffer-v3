@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "4-exercise-part-2/streetpackage.proto";
+
+package Building;
+
+message City {
+    string name = 1;
+    string zip_code = 2;
+    string country_name = 3;
+}
+
+message Building {
+    string building_name = 1;
+    string building_number = 2;
+    
+    street.proto.Street building_street = 3;
+    
+    
+}

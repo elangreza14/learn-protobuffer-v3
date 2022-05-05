@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+//proto for age
+message Person {
+    int32 age = 1; // age
+    string first_name = 2; // first_name 
+    string last_name = 3; // first_name 
+    bytes small_picture = 4; // small_picture
+    bool is_profile_verified = 5; // profile_verified
+    float height = 6; // height
+
+    // repeated for array type
+    repeated string phone_nuber = 7; // height
+}

@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+import "3-basics-part-2/3-date.proto";
+
+//proto for age
+message Person {
+    int32 age = 1; // age
+    string first_name = 2; // first_name 
+    string last_name = 3; // first_name 
+    bytes small_picture = 4; // small_picture
+    bool is_profile_verified = 5; // profile_verified
+    float height = 6; // height
+
+    // repeated for array type
+    repeated string phone_nuber = 7; // height
+
+    //enum for type enum
+    enum EyeColor{
+        BLACK=0;
+        GREEN=1;
+    }
+    //type of eye color
+    EyeColor eye_color = 8;
+    //type outside messag
+    Date birthday = 9;
+
+    message Address {
+        string address_line_1 = 1;
+        string address_line_2 = 2;
+        string zip_code = 3;
+        string city = 4;
+        string country = 5;
+    }
+
+    repeated Address address = 10;
+
+
+}
+
